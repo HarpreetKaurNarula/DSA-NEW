@@ -1,5 +1,5 @@
 package Day1;
 import java.util.scanner;
-public class Databases {
+public class Datatype git {
     public static void main(string[] args) 
 }
