@@ -142,3 +142,205 @@
     }
 }*/
 
+//Q11 
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=1;i<=n;i++){
+            for(int k=1;k<=n-i;k++){
+            System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                if(j%2!=0){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            for(int j=1;j<=i-1;j++){
+                if( (i+j) % 2!=0 ){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+//Q12
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=1;i<=n;i++){
+            for(int k=1;k<=n-i;k++){
+            System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                if(j%2!=0){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print("!");
+                }
+            }
+            for(int j=1;j<=i-1;j++){
+                if( (i+j) % 2!=0 ){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print("! ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+//Q13
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++)
+            System.out.print("* ");
+            System.out.println();
+        }
+        for(int i=n-1;i>=1;i--){
+            for(int j=1;j<=i;j++)
+            System.out.print("* ");
+            System.out.println();
+        }
+    }
+}*/
+
+//Q14 doubt
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=1;i<=n;i++){
+            for(int k=1;k<=n-i;k++){
+            System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+            System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for(int i=n-1;i>=1;i--){
+            for(int k=1;k<=n-i;k++){
+            System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+            System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+//Q15
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=n;i>=1;i--){
+            for(int k=1;k<=n-i;k++){
+            System.out.print("    ");
+            }
+            for(int j=1;j<=i;j++){
+            System.out.print("* ");
+            }
+            System.out.println("");
+        }
+        for(int i=2;i<=n;i++){
+            for(int k=1;k<=n-i;k++){
+            System.out.print("    ");
+            }
+            for(int j=1;j<=i;j++){
+            System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+}*/
+
+//Q16
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=n;i>=1;i--){
+            for(int k=1;k<=i-1;k++)
+            System.out.print("  ");
+            for(int j=1;j<=i;j++)
+            System.out.print(" * ");
+            System.out.println("");
+        }
+        for(int i=2;i<=n;i++){
+            for(int k=1;k<=i-1;k++)
+            System.out.print("  ");
+            for(int j=1;j<=i;j++)
+            System.out.print(" * ");
+            System.out.println("");
+        }
+    }
+}*/
+
+//Q21
+public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("* ");
+            }
+            for(int k=1;k<=(n-i);k++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i && j<=n-1;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Q22
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=n;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print("* ");
+            }
+            for(int k=1;k<=(n-i);k++){
+                System.out.print(" ");
+            }
+            for(int k=2;k<=(n-i);k++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i && j<=n-1;j++){
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+}*/
+
+
+//  Q23
+/*public class PP {
+    public static void main(String[]args){
+        int n=5;
+        for(int i=1;i<=n;i++){
+            for(int k=1;k<=(n-i);k++)
+            System.out.print("  ");
+            for(int j=1;j<=2*i-1;j++)
+            System.out.print("1 ");
+            System.out.println();
+        }
+    }
+}*/
+
