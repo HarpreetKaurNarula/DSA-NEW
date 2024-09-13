@@ -1,0 +1,95 @@
+//Faculty at CodingBlocks loves to purchase smartphones and decides to play a game. Aayush and Harshit decides to shop for smartphones. Aayush purchases 1 smartphone, then Harshit purchases 2 smartphones, then Aayush purchases 3 smartphones, then Harshit purchases 4 smartphones, and so on. Once someone can't purchase more smartphones, he loses.
+Aayush can purchase at most M smartphones and Harshit can purchase at most N smartphones. Who will win ? Print "Aayush" and "Harshit" accordingly.
+Input Format
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows. Two integers M and N denoting the maximum possible number of smartphones Aayush and Harshit can purchase respectively.
+//
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();
+        while (T-- > 0) {
+            int M = scanner.nextInt();
+            int N = scanner.nextInt();
+            System.out.println(whoWins(M, N));
+        }
+    }
+    
+    public static String whoWins(int M, int N) {
+        int totalSmartphones = 0;
+        int turn = 1;
+        while (true)
+            if (turn % 2 == 1) {
+                if (totalSmartphones + turn > M) {
+                    return "Harshit";
+            }
+            totalSmartphones += turn;
+            }
+            else {
+                if (totalSmartphones + turn > N) {
+                    return "Aayush";
+                }
+                totalSmartphones += turn;
+            }
+            turn++;
+        }
+    }
+}
+
+//Due to an immense rise in Pollution, Kejriwal is back with the Odd and Even Rule in Delhi. The scheme is as follows, each car will be allowed to run on Sunday if the sum of digits which are even is divisible by 4 or sum of digits which are odd in that number is divisible by 3. However to check every car for the above criteria can't be done by the Delhi Police. You need to help Delhi Police by finding out if a car numbered N will be allowed to run on Sunday
+//
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        for (int i = 0; i < N; i++) {
+            int carNumber = scanner.nextInt();
+            if (canRunOnSunday(carNumber)) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
+    }
+
+    public static boolean canRunOnSunday(int carNumber) {
+        int evenSum = 0;
+        int oddSum = 0;
+        while (carNumber > 0) {
+            int digit = carNumber % 10;
+            if (digit % 2 == 0) {
+                evenSum += digit;
+            } else {
+                oddSum += digit;
+            }
+            carNumber /= 10;
+        }
+        return (evenSum % 4 == 0 || oddSum % 3 == 0);
+    }
+}
+
+//A number
+Write a function which returns true if the number is an armstrong number and false otherwise, where Armstrong number//
+//
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("");
+        int num = scanner.nextInt();
+        System.out.println(isArmstrong(num));
+    }
+
+    public static boolean isArmstrong(int num) {
+        int sum = 0;
+        int original = num;
+        int digits = String.valueOf(num).length();
+        while (num > 0) {
+            int digit = num % 10;
+            sum += Math.pow(digit, digits);
+            num /= 10;
+        }
+        return sum == original;
+    }
+}
