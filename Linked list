@@ -1,0 +1,36 @@
+//leetcode160//
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode a1=headA;
+        ListNode a2=headB;
+        while(a1!=a2){
+            if(a1==null)
+            a1=headB;
+            else
+            a1=a1.next;
+            if(a2==null)
+            a2=headA;
+            else
+            a2=a2.next;
+        }
+        return a1;
+    }
+}
+
+
+//leetcode206//
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        return rev(head,null);
+        
+    }
+    public  ListNode rev(ListNode curr,ListNode prev){
+        if(curr==null)
+        return prev;
+
+        ListNode temp=rev(curr.next,curr);
+        curr.next=prev;
+        return temp;
+    }
+}
+    
