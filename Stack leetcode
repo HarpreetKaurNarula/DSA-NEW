@@ -1,0 +1,55 @@
+//leetcode20//
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stk=new Stack<>();
+        for(int i=0;i<s.length();i++){
+            if(stk.empty()) stk.push(s.charAt(i));
+            else{
+                if(stk.peek()=='(' && s.charAt(i)==')' ||
+                stk.peek()=='[' && s.charAt(i)==']' ||
+                stk.peek()=='{' && s.charAt(i)=='}' )
+                stk.pop();
+                else
+                stk.push(s.charAt(i));
+
+            }
+        }
+        return stk.empty();
+        
+    }
+
+//leetcode155//
+class MinStack {
+    Stack<Integer> stk;
+    Stack<Integer> minStack;
+
+    public MinStack() {
+        stk=new Stack<>();
+        minStack=new Stack<>();
+        
+    }
+    
+    public void push(int val) {
+        stk.push(val);
+        if (minStack.empty() || val<=minStack.peek())
+        minStack.push(val);
+    }
+    
+    public void pop() {
+        if(stk.peek().equals(minStack.peek()))
+        minStack.pop();
+        stk.pop();    
+    }
+    
+    public int top() {
+        return stk.peek();
+        
+    }
+    
+    public int getMin() {
+        return minStack.peek();
+        
+    }
+}
+
+}
